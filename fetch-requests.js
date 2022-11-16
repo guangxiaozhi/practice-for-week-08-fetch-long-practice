@@ -39,3 +39,15 @@ fetch('/products').then(res => {
 /* ============================== Phase 3 ============================== */
 
 // Your code here
+fetch('/products',{
+  method:'POST',
+  headers:{
+    "Content-Type": "application/x-www-form-urlencoded"
+  },
+  body:new URLSearchParams({
+    name: "Caribbean Delight Coffee",
+    description: "Made by Manatee Coffee",
+    price: 11.99,
+    categories: "grocery"
+  }),
+})
