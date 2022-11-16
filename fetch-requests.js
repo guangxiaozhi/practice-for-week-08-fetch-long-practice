@@ -51,3 +51,15 @@ fetch('/products',{
     categories: "grocery"
   }),
 })
+
+/* ============================== Phase 4 ============================== */
+function addComment(comment, starRating) {
+    return fetch('/products/best-selling', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+        body: new URLSearchParams({
+            comment: comment,
+            starRating: starRating
+        })
+    })
+}
